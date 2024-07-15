@@ -222,50 +222,77 @@
 }
 
 .card-image {
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
 
-.card-content {
-  padding: 20px;
-}
+    .card:hover .card-image {
+      transform: scale(1.1);
+    }
 
-.card-content h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+    .card-content {
+      padding: 20px;
+    }
 
-.card-content p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
+    .card-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
 
-.card-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color:  rgb(96, 133, 82);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.card-link:hover{
-  background-color: rgb(82, 104, 71); 
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+    .card-content p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: rgb(96, 133, 82);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .card-link:hover {
+      background-color: rgb(82, 104, 71);
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      background-color: #f1f1f1;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      animation: slideIn 15s infinite linear;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover .card-content {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
 .skill-section{
   background-color: #f2f2f2;
 }
